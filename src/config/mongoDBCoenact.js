@@ -5,11 +5,7 @@ const mongoose = require('mongoose');
 
 const mongoURI = 'mongodb://localhost:27017/chatApp'
 mongoose.set('strictQuery', true);
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  
-});
+mongoose.connect(mongoURI);
 
 const db = mongoose.connection;
 
