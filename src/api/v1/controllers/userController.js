@@ -5,27 +5,26 @@ const userSchema = require("../../../schemas/userSchema");
 class UserController {
   async signup(req, res) {
     const parsBody = userSchema.safeParse(req.body);
-    
 
-    if (!parsBody.success || parsBody.data.agreeTerms !== "boolean") {
-      return res
-        .status(400)
-        .json({ error: "Invalid input. Please provide valid data." });
-    }
+    // if (!parsBody.success) {
+    //   return res
+    //     .status(400)
+    //     .json({ error: "Invalid input. Please provide valid data." });
+    // }
     console.log(parsBody.data);
 
-    try {
-      const newUser = await userService.signup(
-        username,
-        email,
-        password,
-        agreeTerms
-      );
-      res.status(201).json(newUser);
-    } catch (error) {
-      console.error(error);
-      res.status(500).json({ error: "Internal Server Error" });
-    }
+    // try {
+    //   const newUser = await userService.signup(
+    //     ...Object.values(parsBody.data)
+    //   );
+    //   res.status(201).json({
+    //     message: "User created successfully",
+    //     user: newUser,
+    //   });
+    // } catch (error) {
+    //   console.error(error);
+    //   res.status(500).json({ error: "Internal Server Error" });
+    // }
   }
 
   async getUserById(req, res, next) {
