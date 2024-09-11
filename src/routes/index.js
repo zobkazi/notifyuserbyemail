@@ -1,3 +1,4 @@
+// src/routes/index.js
 const authRoutes = require("../modules/auth/auth.routes");
 
 
