@@ -4,13 +4,8 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "start": "concurrently \"yarn workspace api start\" \"yarn workspace v1 start\""
+    "start": "node ./src/index.js"
   },
-  "workspaces": [
-    "packages/*",
-    "apps/*",
-    "examples/*"
-  ],
   "repository": "https://github.com/zobkazi/notifyuserbyemail.git",
   "author": "Zobaidul Kazi <zobaidulkazi64.official@gmail.com>",
   "license": "MIT"
